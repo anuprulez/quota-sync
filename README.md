@@ -1,22 +1,5 @@
-# Galaxy-Google Response Quota Sync
+# Provide GPU Jupyterlab access
 
-Write a configuration file:
-
-```yaml
-url: https://usegalaxy.eu
-key: ....
-filename: 'Quota Request Form (Responses).tsv'
-```
-
-Then you can run it like:
-
-```
-./gdrive export {google_file_id} --mime text/tab-separated-values --force
-CONFIG_FILE=conf.yaml python process.py
-```
-
-It will automatically generate missing quotas and synchronize the user list.
-
-## LICENSE
-
-GPLv3
+## Steps
+1. Add Galaxy URL, API key and tabular file extracted from Google form in `config_file.yaml`
+2. Execute `add_email_to_role` script
